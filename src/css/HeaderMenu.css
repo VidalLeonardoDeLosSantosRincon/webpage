@@ -1,0 +1,21 @@
+.header-menu{
+    background: white;
+    list-style: none;
+    width: 300px;
+    padding:10px 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-menu li{
+    display: inline-block;
+}
+
+
+.header-menu a{
+    text-decoration: none;
+    color:gray;
+}

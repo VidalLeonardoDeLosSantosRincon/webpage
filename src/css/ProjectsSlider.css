@@ -1,0 +1,42 @@
+ .slide-ctr{
+     height: 100%;
+     width:80%;
+     background:green;
+
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+ .slide-ctr .btn-slide{
+    color:gray;
+    height: 50px;
+    width: 50px;
+    padding:10px;
+    box-sizing: border-box;
+    border:none;
+    border-radius: 50px;
+    font-size:20px;
+    outline: none;
+}
+
+
+
+ .slide-ctr .slide-box{
+    height: 100%;
+    width:80%;
+    background: red;
+    overflow-y: hidden;
+    overflow-x:scroll;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.slide-ctr .slide-box .slide-item{
+    height:80%;
+    width:30%;
+    background: white;
+    margin:5px;
+}
