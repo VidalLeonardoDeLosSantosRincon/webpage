@@ -1,21 +1,20 @@
  .slide-ctr{
      height: 100%;
-     width:80%;
-     background:green;
+     width:100%;
+     background:white;
 
      display: flex;
      justify-content: space-around;
      align-items: center;
  }
  .slide-ctr .btn-slide{
-    color:gray;
-    height: 50px;
-    width: 50px;
-    padding:10px;
+    color:white;
+    height: 30px;
+    width: 30px;
     box-sizing: border-box;
     border:none;
     border-radius: 50px;
-    font-size:20px;
+    font-size:15px;
     outline: none;
 }
 
@@ -24,19 +23,22 @@
  .slide-ctr .slide-box{
     height: 100%;
     width:80%;
-    background: red;
-    overflow-y: hidden;
-    overflow-x:scroll;
+    background: white;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 
 }
 
 .slide-ctr .slide-box .slide-item{
     height:80%;
-    width:30%;
+    width:300px;
     background: white;
     margin:5px;
+}
+
+.slide-ctr .slide-box .slide-item img{
+    height: 100%;
+    width:100%;
 }

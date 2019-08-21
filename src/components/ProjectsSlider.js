@@ -1,11 +1,23 @@
 import React,{Component, Fragment} from "react";
 import "../css/ProjectsSlider.css";
 
+import SlideImage from "./SlideImage";
 
 class ProjectsSlider extends Component{
     constructor(props){
         super(props);
         this.state = {
+            imagenes:[ 
+                {src:"https://source.unsplash.com/collection/881002",
+                alt:"uno.jpg"
+                },
+                {src:"https://source.unsplash.com/umchkHwkdyM",
+                alt:"dos.jpg"
+                },
+                {src:"https://source.unsplash.com/weekly",
+                alt:"tres.jpg"
+                }
+            ],
             prev:"",
             next:"",
             count:0
@@ -14,6 +26,8 @@ class ProjectsSlider extends Component{
         this.handleClickNext = this.handleClickNext.bind(this);
         this.handleClickPrev = this.handleClickPrev.bind(this);
     }
+
+
 
 handleClickNext(){
     this.setState((state,props)=>{
@@ -29,18 +43,23 @@ handleClickPrev(){
         }
     });
 }
+
     render(){
+
+        const {imagenes} = this.state;
+
+       
         return(
             <Fragment>
                 <div className="slide-ctr">
                     <input type="button" onClick={this.handleClickPrev} className="btn-slide" id="btn-left" value="<"/>
                     <div className="slide-box">
-                        <div className="slide-item">
-                        </div>
-                        <div className="slide-item">
-                        </div>
-                        <div className="slide-item">
-                        </div>
+                        { imagenes.map(function(img ,index){
+                            return (<div key={`img_${index}`} className="slide-item">
+                                <SlideImage img={img}/>
+                            </div>);
+                            })
+                        }
                     </div>    
                     <input type="button" onClick={this.handleClickNext} className="btn-slide" id="btn-right" value=">"/>
                     {console.log(this.state.count)}

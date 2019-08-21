@@ -9,7 +9,6 @@ const InfoCard = (props)=>{
     return(
         <Fragment>
             <div className="info-card-box">
-                info card
                 <ProjectsSlider/>
             </div>
         </Fragment>
