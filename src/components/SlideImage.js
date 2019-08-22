@@ -1,10 +1,10 @@
 import React,{Fragment} from "react";
 
 const SlideImage = (props)=>{
-    const {img} = props;
+    const {img,id} = props;
     return(
         <Fragment>
-                <img src={img.src} alt={img.alt}/>
+                <img src={img.src} id={id} alt={img.alt}/>
         </Fragment>
     )
 };
